@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request
 from flask_mail import Mail, Message
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='/static')
 
 # ── Configuración Gmail SMTP ──────────────────────────────────────────────────
 app.config['MAIL_SERVER']         = 'smtp.gmail.com'
