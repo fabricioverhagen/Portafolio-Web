@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request
 from flask_mail import Mail, Message
 import os
 
-app = Flask(__name__, static_folder='static', static_url_path='/static')
+app = Flask(__name__)
 
 # ── Configuración Gmail SMTP ──────────────────────────────────────────────────
 app.config['MAIL_SERVER']         = 'smtp.gmail.com'
@@ -125,6 +125,18 @@ EDUCATION = [
 ]
 
 PROJECTS = [
+    {
+        "title": "PV Travel — Agencia de Viajes",
+        "description": (
+            "Sitio web completo para agencia de viajes desarrollado con WordPress y SQL. "
+            "Incluye catálogo de destinos, sistema de consultas y diseño responsive. "
+            "Actualmente en producción y operativo."
+        ),
+        "tags": ["WordPress", "SQL", "PHP", "UI/UX"],
+        "github": "",
+        "live": "https://pvtravel.com.ar",
+        "featured": True,
+    },
     {
         "title": "Sistema de Gestión de Notas",
         "description": (
